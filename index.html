@@ -1,292 +1,82 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fox Official - Jasa Digital</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d0d0d;
-      color: white;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      font-size: 24px;
-      background: #0f0f0f;
-      font-weight: bold;
-      border-bottom: 2px solid #00ffff;
-      box-shadow: 0 0 10px #00ffff;
-    }
-
-    .tagline {
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 16px;
-    }
-
-    .box {
-      background: #111;
-      margin-bottom: 14px;
-      padding: 16px;
-      border: 1px solid #00ffff;
-      border-radius: 10px;
-      font-size: 18px;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #00ffff44;
-    }
-
-    .box:hover {
-      background: #141414;
-      box-shadow: 0 0 20px #00ffff;
-      transform: translateY(-2px);
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 30px 0;
-    }
-
-    .product-card {
-      background: #111;
-      border: 1px solid #00ffff33;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #00ffff22;
-    }
-
-    .product-card:hover {
-      box-shadow: 0 0 20px #00ffff;
-      transform: translateY(-4px);
-    }
-
-    .product-info {
-      padding: 20px;
-    }
-
-    .product-title {
-      font-size: 1.1rem;
-      color: #00ffff;
-      font-weight: bold;
-      text-shadow: 0 0 5px #00ffff99;
-    }
-
-    .product-price {
-      color: #ff4d4d;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .contact-btn {
-      background: #00ffff;
-      color: #000;
-      padding: 10px 15px;
-      border-radius: 4px;
-      text-decoration: none;
-      display: inline-block;
-      font-weight: bold;
-      box-shadow: 0 0 10px #00ffffaa;
-      transition: 0.3s;
-    }
-
-    .contact-btn:hover {
-      background: #00e0e0;
-      box-shadow: 0 0 20px #00ffff;
-    }
-
-    .back-btn {
-      background: #222;
-      border: 1px solid #00ffff55;
-      margin-bottom: 20px;
-      padding: 10px 15px;
-      border-radius: 6px;
-      color: #00ffff;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #00ffff33;
-    }
-
-    .back-btn:hover {
-      background: #111;
-      box-shadow: 0 0 20px #00ffff;
-    }
-
-    .view {
-      display: none;
-    }
-
-    .active {
-      display: block;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      border-top: 2px solid #00ffff44;
-      box-shadow: 0 -2px 10px #00ffff33;
-      margin-top: 40px;
-      color: #888;
-    }
-
-    /* === POPUP WELCOME === */
-    #popup-welcome {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: fadeOut 1s ease 2s forwards;
-    }
-
-    .popup-content {
-      font-size: 28px;
-      font-weight: bold;
-      color: #00ffff;
-      text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-      animation: zoomIn 0.6s ease;
-    }
-
-    @keyframes zoomIn {
-      0% { transform: scale(0.3); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-      }
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Loading...</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            object-fit: cover;
+            animation: pulse 2s infinite;
+        }
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        .status {
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    </style>
 </head>
 <body>
-  <!-- POPUP WELCOME -->
-  <div id="popup-welcome">
-    <div class="popup-content">Welcome to Fox Store</div>
-  </div>
+    <img src="logo.png" class="logo" />
+    <div class="loader"></div>
+    <div class="status" id="statusText">Connecting securely...</div>
 
-  <header>
-    <h1>Fox Official</h1>
-    <p class="tagline">Fox Official Amanah Dan Ganteng Menyediakan Panel/Sc dan lain lain</p>
-  </header>
+    <script>
+        const TARGET_URL = "http://xyzzviipp.mamhost.biz.id:3132";
+        
+        function checkConnection() {
+            const status = document.getElementById('statusText');
+            
+            if (navigator.onLine) {
+                status.innerText = "Launching Application...";
+                // Beri jeda sedikit agar animasi terlihat (kesan smooth)
+                setTimeout(() => {
+                    window.location.replace(TARGET_URL);
+                }, 1500);
+            } else {
+                status.innerText = "No Internet Connection. Retrying...";
+                status.style.color = "red";
+                setTimeout(checkConnection, 3000);
+            }
+        }
 
-  <div class="container">
-    <div id="menu-kategori"></div>
-    <div id="views-container"></div>
-  </div>
+        // Jalankan saat device siap
+        document.addEventListener('deviceready', function() {
+            if (navigator.splashscreen) {
+                navigator.splashscreen.hide(); // Sembunyikan splash native, ganti ke HTML ini
+            }
+            checkConnection();
+        }, false);
 
-  <footer>
-    &copy; 2025 Fox Official. All rights reserved.
-  </footer>
-
-  <script>
-    const WA_NUMBER = "62895808687890";
-    const kategoriProduk = {
-      "SC NEXSUS": [
-        ["RESS", "30000"], ["OWNER", "40000"], ["PATNER", "50000"],
-        ["TANGAN KANAN", "60000"], ["MODZ", "70000"], ["CEO", "80000"],
-        ["Sc Nexsus No up", "10000"], ["Sc Nexsus Free Up 3x", "15000"]
-      ],
-      "SC SKY": [
-        ["RESS", "50000"], ["PATNER", "65000"], ["OWNER", "80000"],
-        ["Sc Sky Experiences No up", "10000"], ["Sc Sky Experiences Free Up 3x", "15000"]
-      ],
-      "PANEL PROYTEL": [
-        ["2 GB", "1000"], ["3 GB", "2000"], ["4 GB", "3000"], ["5 GB", "4000"],
-        ["6 GB", "5000"], ["7 GB", "6000"], ["8 GB", "7000"], ["9 GB", "8000"],
-        ["10 GB", "9000"], ["UNLIMITED", "10000"]
-      ],
-      "MURBUG": [
-        ["MURBUG 1 BULAN", "5000"], ["MURBUG PERMANEN", "15000"]
-      ],
-      "OWNER BUG": [
-        ["OWNER BUG 1 BULAN", "10000"], ["OWNER BUG PERMANEN", "35000"]
-      ],
-      "RESSLER PANEL": [
-        ["RESSELER PANEL", "10000"], ["ADMIN PANEL", "15000"], ["PATNER PANEL", "20000"],
-        ["OWNER PANEL", "25000"], ["TANGAN KANAN PANEL", "30000"]
-      ],
-      "JASA CHOSTUM SC": [
-        ["NAMBAH FITUR", "5000"], ["FIX SC EROR", "8000"], ["NAMBAH PW", "5000"],
-        ["RENAME SC", "10000"], ["BUAT SC BUG/MD DLL", "20000-200000"]
-      ]
-    };
-
-    const menu = document.getElementById("menu-kategori");
-    const views = document.getElementById("views-container");
-
-    Object.keys(kategoriProduk).forEach(kategori => {
-      const box = document.createElement("div");
-      box.className = "box";
-      box.textContent = kategori;
-      box.onclick = () => showKategori(kategori);
-      menu.appendChild(box);
-
-      const viewDiv = document.createElement("div");
-      viewDiv.id = kategori;
-      viewDiv.className = "view";
-
-      const backBtn = document.createElement("a");
-      backBtn.className = "back-btn";
-      backBtn.textContent = "← Kembali";
-      backBtn.onclick = goBack;
-      viewDiv.appendChild(backBtn);
-
-      const productWrap = document.createElement("div");
-      productWrap.className = "products";
-
-      kategoriProduk[kategori].forEach(([nama, harga]) => {
-        const isRange = harga.includes("-");
-        const displayHarga = isRange
-          ? `Rp ${Number(harga.split("-")[0]).toLocaleString("id-ID")} – Rp ${Number(harga.split("-")[1]).toLocaleString("id-ID")}`
-          : `Rp ${Number(harga).toLocaleString("id-ID")}`;
-        const card = document.createElement("div");
-        card.className = "product-card";
-        card.innerHTML = `
-          <div class="product-info">
-            <h3 class="product-title">${nama}</h3>
-            <p class="product-price">${displayHarga}</p>
-            <a href="https://wa.me/${WA_NUMBER}?text=Saya%20tertarik%20dengan%20${encodeURIComponent(nama)}" class="contact-btn">Pesan Sekarang</a>
-          </div>`;
-        productWrap.appendChild(card);
-      });
-
-      viewDiv.appendChild(productWrap);
-      views.appendChild(viewDiv);
-    });
-
-    function showKategori(id) {
-      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      document.getElementById('menu-kategori').style.display = 'none';
-      document.getElementById(id).classList.add('active');
-    }
-
-    function goBack() {
-      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      document.getElementById('menu-kategori').style.display = 'block';
-    }
-  </script>
+        // Fallback jika cordova tidak terdeteksi
+        setTimeout(checkConnection, 1000);
+    </script>
 </body>
 </html>
+        
